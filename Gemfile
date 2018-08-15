@@ -17,6 +17,11 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.8'
+end
+
+group :test do
+  gem 'capybara', '~> 3.6'
 end
 
 group :development do
