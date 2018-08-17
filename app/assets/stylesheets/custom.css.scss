@@ -19,3 +19,12 @@ body {
 #error_explanation h2 {
   font-size: 150px;
 }
+
+.signed-in-user {
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.signed-in-user .navbar-text {
+  color: #ffffff;
+}
