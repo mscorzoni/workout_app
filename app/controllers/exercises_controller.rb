@@ -30,7 +30,7 @@ class ExercisesController < ApplicationController
   def destroy
     @exercise.destroy
     flash[:notice] = 'Exercise has been deleted'
-    redirect_to user_exercise_path(current_user)
+    redirect_to user_exercises_path(current_user)
   end
 
   def update
@@ -52,4 +52,5 @@ class ExercisesController < ApplicationController
     def set_exercise
       @exercise = current_user.exercises.find(params[:id])
     end
+
 end
