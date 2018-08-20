@@ -1,3 +1,4 @@
+
 require "rails_helper"
 
 RSpec.feature "Following Friends" do
@@ -27,7 +28,7 @@ RSpec.feature "Following Friends" do
     find(link).click
 
     href = "/friendships?friend_id=#{@peter.id}"
-    expect(page).not_to have_link("Follow", :href => href)
+    expect(page).to have_link("Follow", :href => href)
   end
 
 end
