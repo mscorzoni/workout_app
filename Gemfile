@@ -18,6 +18,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'd3-rails', '~> 5.5'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 
 
 group :development, :test do
