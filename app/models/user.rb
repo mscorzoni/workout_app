@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :exercises
   has_many :friendships
-  has_many :friends, through: :friendships
+  has_many :friends, through: :friendships, class_name: 'User'
 
 
   validates :first_name, presence: true
@@ -41,5 +41,4 @@ class User < ApplicationRecord
    def current_friendship(friend)
      friendships.where(friend: friend).first
    end
-   
  end

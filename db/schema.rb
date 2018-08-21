@@ -25,11 +25,6 @@ ActiveRecord::Schema.define(version: 2018_08_20_215645) do
     t.index ["user_id"], name: "index_exercises_on_user_id"
   end
 
-  create_table "friends", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "friendships", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "friend_id"
@@ -57,8 +52,4 @@ ActiveRecord::Schema.define(version: 2018_08_20_215645) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
-  add_foreign_key "exercises", "users"
-  add_foreign_key "friendships", "friends"
-  add_foreign_key "friendships", "users"
 end
