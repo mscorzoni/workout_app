@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   end
   resources :friendships, only: [:show, :create, :destroy]
   resources :messages, only: [:create]
+
+  mount ActionCable.server => '/cable'
+
 end
